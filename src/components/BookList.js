@@ -41,6 +41,6 @@ const BookList = props => {
 
 BookList.propTypes = {
   books: PropTypes.array.isRequired,
-  changeShelf: PropTypes.func.isRequired
+  shelfSwitch: PropTypes.func.isRequired
 };
 export default BookList;

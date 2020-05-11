@@ -7,7 +7,7 @@ import * as BooksAPI from "../BooksAPI";
 class Search extends Component {
   static propTypes = {
     books: PropTypes.array.isRequired,
-    changeShelf: PropTypes.func.isRequired
+    shelfSwitch: PropTypes.func.isRequired
   };
 
   state = {
@@ -30,7 +30,7 @@ class Search extends Component {
 
   render() {
     const { query, newBooks, searchErr } = this.state;
-    const { books, changeShelf } = this.props;
+    const { books, shelfSwitch } = this.props;
 
     return (
       <div className="search-books">
@@ -57,7 +57,7 @@ class Search extends Component {
                     book={book}
                     books={books}
                     key={book.id}
-                    changeShelf={changeShelf}
+                    shelfSwitch={shelfSwitch}
                   />
                 ))}
               </ol>
